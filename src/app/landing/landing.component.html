@@ -1,0 +1,16 @@
+<div class="container bg-light py-5">
+    <h1 class="display-5 fw-bold">This is the Quizz App</h1>
+    <p class="col-md-8 fs-4">We will have a total of 10 questions with each question carrying 10points each</p>
+    <p class="fw-bold">Instructions:</p>
+    <ol> 
+        <li>Multiple options for answer</li>
+        <li>Select appropriate options</li>
+        <li>Answers can be reviewed at the end of the quizz</li>
+        <li>Submit the answers to end the quizz and look at the results</li>
+    </ol>
+    <div class="name col-md-4 my-3">
+        <label for="" class="fw-bold">Enter your name</label>
+        <input #name type="text" name="" id="" class="form-control form-control-sm" required>
+    </div>
+    <button class="btn btn-outline-primary btn-sm" routerLink="/questions" (click)="startQuiz()">Start Quizz!!</button>
+</div>

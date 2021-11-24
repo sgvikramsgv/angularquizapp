@@ -1,0 +1,30 @@
+.card {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+li {
+	list-style-type: none;
+	cursor: pointer;
+	padding: 10px;
+	border: 1px solid rgb(216, 215, 215);
+	border-radius: 4px;
+}
+
+li:hover {
+	border: 1px solid blue;
+}
+
+ol {
+	padding: 0;
+	margin: 20px auto;
+}
+.questions {
+	list-style-type: none;
+	cursor: pointer;
+	margin: 10px 0;
+	padding: 5px;
+	border: 1px solid gray;
+	border-radius: 4px;
+}
