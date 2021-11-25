@@ -11,6 +11,7 @@ export class QuestionsComponent implements OnInit {
 
   public name: string="";
   public questionList : any=[];
+  public answerOption: any=[];
   public currentQuestion: number = 0;
   public points:number = 0;
   public counter:number=60;
@@ -27,8 +28,10 @@ export class QuestionsComponent implements OnInit {
     this.startTimer();
   }
   getAllQuestions(){
-    this.questionService.getQuestionJson().subscribe(res=>{this.questionList = res.questions;});
-    
+    this.questionService.getQuestionJson()
+    .subscribe(res=>{
+      this.questionList = res.questions;
+    });
   }
 
   nextQuestion(){
@@ -40,7 +43,10 @@ export class QuestionsComponent implements OnInit {
   }
 
   selectedAnswer(selectedQues:number, option:any){
-
+    this.answerOption[this.currentQuestion] = option;
+    console.log(this.answerOption);
+    console.log(selectedQues);
+    console.log(option);
     if(selectedQues === this.questionList.length){
       this.isCompleted = true;
       this.stopTimer();
